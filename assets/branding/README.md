@@ -41,6 +41,12 @@ have opaque backgrounds; the transparent cameo can be used on other surfaces.
 
 ## Source and exports
 
+The portrait is inspired by Peter Paul Rubens's *Adam and Eve* (1598–1600),
+City of Antwerp Collection, Rubenshuis, Antwerp, Belgium. See
+[artwork credits and public-domain image sources](source/artwork-credits.md).
+The original painting and its public-domain reproductions are separate from
+the generated logo assets; the repository license does not change their status.
+
 `source/eve-approved.png` is the original approved logo; the light and dark
 full-resolution files in `logo/` are the release raster masters.
 `source/eve-icon-transparent.png` is the transparent icon master. Dark recoloring

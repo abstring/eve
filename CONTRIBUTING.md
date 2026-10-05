@@ -13,3 +13,10 @@ Keep providers and transports outside the core. Before adding a dependency or
 copying code, record its exact version/revision, license, dependency tree, and
 notices in `docs/licensing.md`. Contributions are AGPL-3.0-only. Do not copy
 noncommercial or ambiguously licensed code into Eve.
+
+When a different AI model is used to develop Eve, update the README's
+**Software development attribution** section with the provider, model name,
+date, and contribution scope. Retain earlier entries rather than replacing
+the history. Record the actual model when known; identify an unknown version
+as unknown instead of guessing. AI-assisted contributions require the same
+human review and relevant validation as other contributions.

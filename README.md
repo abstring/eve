@@ -131,6 +131,26 @@ design inputs. Fixtures exercise integration plumbing, not production circuits.
 CI tests Linux package installation on Python 3.11 and 3.14.
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Software development attribution
+
+Eve's code is co-developed by human developers with assistance from
+**OpenAI GPT-6.1 Sol**. AI is used to help develop this software, including
+implementation, research, documentation, and validation. Human developers
+remain responsible for reviewing changes and making engineering decisions.
+
+AI can introduce mistakes, incorrect assumptions, or misconceptions that human
+developers also miss. Human review and passing tests do not guarantee that the
+software is correct or that its engineering conclusions are sound. Independently
+verify results before relying on them in a hardware design.
+
+We record development model changes below, retaining earlier entries so this
+disclosure reflects the project's history. This attribution concerns development
+of Eve itself; it does not restrict which models engineers can use with Eve.
+
+| Recorded date | Model | Development use |
+| --- | --- | --- |
+| 2026-10-05 | OpenAI GPT-6.1 Sol | Initial software development assistance |
+
 ## License
 
 Eve is **AGPL-3.0-only**; see [LICENSE](LICENSE). Commercial use is permitted
@@ -140,4 +160,6 @@ opened or checked with the tool.
 The [dependency/license review](docs/licensing.md) records the decision.
 No code from the investigated MCP implementations has been incorporated.
 
-Project logo and icon downloads: [brand assets](assets/branding/README.md).
+Project logo and icon downloads: [brand assets](assets/branding/README.md).[^artwork]
+
+[^artwork]: Logo inspired by Peter Paul Rubens's *Adam and Eve* (1598–1600), City of Antwerp Collection, [Rubenshuis, Antwerp, Belgium](https://www.rubenshuis.be/en/peter-paul-rubens-adam-and-eve). The museum image is public domain. [Artwork credits and image sources](assets/branding/source/artwork-credits.md).
