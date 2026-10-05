@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eve-engineer"
+version = "0.1.0.dev0"
+description = "Linux-native, engineer-in-the-loop AI engineering for KiCad"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.scripts]
+eve = "eve.cli:main"
+
+[project.urls]
+Repository = "https://github.com/abstring/eve"
+
+[tool.setuptools.packages.find]
+where = ["src"]
