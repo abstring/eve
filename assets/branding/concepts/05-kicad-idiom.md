@@ -1,0 +1,9 @@
+# KiCad-inspired Eve concept
+
+Generated using the built-in image generator. Raster concept with an opaque white background; not a vector master.
+
+Style reference: [KiCad icon design guidelines](https://dev-docs.kicad.org/en/rules-guidelines/icon-design/index.html), specifically flat graphics and blue/orange palette. No KiCad logo artwork was incorporated.
+
+## Generation prompt
+
+Use case: logo-brand. Create one polished new logo concept for "eve.engineer", an open-source Linux-native AI engineering agent for KiCad. Input image is reference only: the supplied Rubens painting detail, Eve looking downward with her hand raised toward her mouth. Reinterpret her profile and hand as an extremely simplified flat white silhouette in a blue square app icon, with a few restrained circuit traces, an orange circular connection pad accent. Strong crisp geometric silhouette, minimal interior detail, recognizable at small sizes. Evoke the KiCad visual idiom: practical flat engineering software graphics, primary blue #1A81C4, accent blue #39B4EA, gold/orange #F29100, white #FFFFFF, primary gray #545454. No gradients, textures, shadows or 3D. Keep Eve distinctive: do not use KiCad's actual Ki lettering or its logo, and do not add any affiliation or KiCad text. Horizontal logo lockup on a clean white landscape canvas, square blue symbol to the left and exceptionally prominent large lowercase wordmark "eve.engineer" to the right. Friendly robust bold technical sans-serif lettering, readable full domain, blue letters and orange dot between eve and engineer. Spell EXACTLY "eve.engineer". One cohesive balanced logo, generous margins, icon and wordmark vertically aligned, no mockup, no captions, no additional text, no watermark. Preserve a clear visual relationship to the painting via lowered forehead/nose/chin profile and raised hand, not a generic woman's face.

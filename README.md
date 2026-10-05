@@ -1,5 +1,13 @@
 # Eve
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/branding/logo/eve-logo-dark-768.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/branding/logo/eve-logo-light-768.png">
+    <img src="assets/branding/logo/eve-logo-light-768.png" alt="eve.engineer — Eve inspecting a PCB, framed by natural leaves" width="640">
+  </picture>
+</p>
+
 **She took the knowledge. Then she shared it with everyone.**
 
 Open-source, Linux-native AI engineering for KiCad.
@@ -131,3 +139,5 @@ opened or checked with the tool.
 
 The [dependency/license review](docs/licensing.md) records the decision.
 No code from the investigated MCP implementations has been incorporated.
+
+Project logo and icon downloads: [brand assets](assets/branding/README.md).
