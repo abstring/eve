@@ -10,10 +10,12 @@
 
 **She took the knowledge; then she shared it with everyone.**
 
-Open-source, Linux-native AI engineering for KiCad.
+Open-source, Linux-native AI engineering for KiCad ECAD and FreeCAD MCAD.
 
 Eve is being built to help engineers design, analyze, modify, verify, and iterate
-on real electronic hardware. She is model-agnostic, Git-native, and designed
+on real electronic and mechanical hardware, bringing KiCad electrical design
+and FreeCAD mechanical design into a shared workflow. She is model-agnostic,
+Git-native, and designed
 around an engineer-in-the-loop philosophy:
 
 **AI proposes and implements. Tools verify. Humans own the engineering decisions.
@@ -24,17 +26,46 @@ Physics gets the final vote.**
 This is the `0.1.0.dev0` foundation, not a finished autonomous design agent.
 It provides working local tools for environment discovery, project inspection,
 and recorded KiCad electrical/design rule checks. Model connections, MCP,
-schematic editing, and PCB mutation are planned.
+schematic editing, PCB mutation, and FreeCAD integration are planned. The current
+CLI implements KiCad workflows; MCAD and manufacturing features below describe
+the intended scope, not capabilities already available.
 
 The first milestone is one reviewable loop: inspect a small existing design,
 propose a bounded change, implement it in an isolated Git branch/worktree,
 run KiCad checks, and present the diff and evidence for an engineer to accept.
+
+## Where Eve is going
+
+- **AI-assisted ECAD and MCAD:** design, edit, and verify electronics in KiCad
+  and mechanical parts and assemblies in FreeCAD.
+- **Bidirectional co-design:** exchange and reconcile electrical and mechanical
+  designs, including PCB outlines, mounting holes, component envelopes,
+  enclosures, and clearance constraints. Changes in either discipline should
+  remain reviewable in the other.
+- **Procedural 3D parts:** create parameterized parts from manufacturer
+  datasheets, with source references, dimensions, tolerances, and explicit
+  assumptions available for review.
+- **Auditing and learning:** inspect and verify electrical and mechanical
+  designs, explain findings, and tutor learners through the engineering
+  decisions behind a design.
+- **Model choice:** connect to models through an OpenAI-compatible API format,
+  keeping engineering tools independent of any particular model or provider.
+- **Sourcing and manufacturing preparation:** help select and source parts,
+  prepare PCB stackups and fabrication packages, and create mechanical drawings
+  and CAM packages for machine shops and automated cutting services such as
+  SendCutSend. Packages should include the relevant materials, tolerances, and
+  verification evidence for the chosen process and supplier.
+
+More to come as real projects shape the workflow. Across both disciplines,
+engineers review changes and approve design and manufacturing decisions.
 
 ## Try it on Linux
 
 Requirements: Python 3.11+, Git for revision context, and KiCad 9+ for checks.
 Initial live validation used KiCad 10.0.6 through Flatpak. Native `kicad-cli`
 is preferred; Eve falls back to the `org.kicad.KiCad` Flatpak.
+FreeCAD is the planned MCAD integration target and is not required by the
+current CLI.
 
 ```sh
 python3 -m venv .venv
@@ -112,8 +143,11 @@ tests/
 ```
 
 Models will use the same engineering tools as the CLI. Optional MCP transport
-and provider adapters can be added without embedding a particular model SDK in
-the core. Prefer the official IPC API for future PCB edits; retain the CLI for
+and OpenAI-compatible API adapters can be added without embedding a particular
+model SDK in the core. A planned FreeCAD adapter will expose mechanical design
+and verification tools alongside the KiCad adapter, with explicit exchange
+artifacts and units at the ECAD/MCAD boundary. Prefer the official KiCad IPC API
+for future PCB edits; retain the CLI for
 headless checks. No web service, database, containers, or agent framework is
 needed for the first milestone. See [architecture](docs/architecture.md) and
 [integration research](docs/reconnaissance.md).
