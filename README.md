@@ -27,8 +27,8 @@ This is the `0.1.0.dev0` foundation, not a finished autonomous design agent.
 It provides working local tools for environment discovery, project inspection,
 and recorded KiCad electrical/design rule checks. Model connections, MCP,
 schematic editing, PCB mutation, and FreeCAD integration are planned. The current
-CLI implements KiCad workflows; MCAD and manufacturing features below describe
-the intended scope, not capabilities already available.
+CLI implements KiCad workflows; MCAD, manufacturing, and firmware interface
+features below describe the intended scope, not capabilities already available.
 
 The first milestone is one reviewable loop: inspect a small existing design,
 propose a bounded change, implement it in an isolated Git branch/worktree,
@@ -48,6 +48,11 @@ run KiCad checks, and present the diff and evidence for an engineer to accept.
 - **Auditing and learning:** inspect and verify electrical and mechanical
   designs, explain findings, and tutor learners through the engineering
   decisions behind a design.
+- **Firmware interface handoff:** create interface control documents (ICDs)
+  and matching firmware stubs and starter templates for mainstream
+  microcontrollers such as RP2040, ESP32, and STM32. Tie GPIO assignments and
+  peripheral interfaces to the hardware design so engineers can bring up a
+  board with a small "hello world" that exercises its intended connections.
 - **Model choice:** connect to models through an OpenAI-compatible API format,
   keeping engineering tools independent of any particular model or provider.
 - **Sourcing and manufacturing preparation:** help select and source parts,
@@ -58,6 +63,27 @@ run KiCad checks, and present the diff and evidence for an engineer to accept.
 
 More to come as real projects shape the workflow. Across both disciplines,
 engineers review changes and approve design and manufacturing decisions.
+
+### Firmware interface scope
+
+Eve is a hardware design platform. Its planned firmware assistance supports
+accurate interface control and a handoff to the engineer's chosen coding
+environment. An ICD should identify signals, MCU pins and GPIO assignments,
+directions, voltage levels, peripheral mappings, timing constraints, and safe
+startup states, with references to the hardware revision and relevant datasheets.
+Matching templates should keep those assignments traceable to the ICD and make
+unresolved assumptions explicit.
+
+For example, an RP2040 board could receive a minimal bring-up project that
+toggles the designated LED, reads an intended input, and initializes the
+specified serial or sensor interface on the assigned GPIOs. These small
+examples and stubs are starting points for checking the documented interfaces;
+they require engineer review and testing on the actual hardware.
+
+Comprehensive firmware design, application logic, production drivers, and a
+replacement for the engineer's software toolchain are outside Eve's scope.
+Engineers take the exported ICDs and templates into their own development
+environment for further firmware engineering.
 
 ## Try it on Linux
 
