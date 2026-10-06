@@ -25,6 +25,11 @@ its size also reduces line widths and gaps.
 
 ## FreeCAD sketch and relief
 
+![FreeCAD sketch preview of the 15 × 15 mm co-designed with eve.engineer mark](freecad/sketch-preview.png)
+
+The FreeCAD sketch shown above is ready for placement on a part for raised or
+recessed marking.
+
 Open `freecad/Eve_CoDesigned_15mm.FCStd`. It contains:
 
 - `EveAttribution`: editable closed polylines on the XY plane, centered at the
