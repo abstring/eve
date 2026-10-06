@@ -8,7 +8,7 @@
   </picture>
 </p>
 
-**She took the knowledge. Then she shared it with everyone.**
+**She took the knowledge; then she shared it with everyone.**
 
 Open-source, Linux-native AI engineering for KiCad.
 
