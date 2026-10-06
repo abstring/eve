@@ -59,6 +59,49 @@ versions and complete dependency trees remain unaudited for adoption. The same
 applies to optional schematic libraries and model SDKs. Add versioned findings
 here before adding an extra, vendored source, or runtime package.
 
-Using Eve does not by itself change the license of an engineer's design. AGPL
-obligations apply to covered software; license conditions on external component
-libraries and generated output containing third-party material remain separate.
+## Designs and generated outputs
+
+**Your designs are yours. Eve's AGPL license applies to Eve's software, not to
+hardware designs or other outputs created, edited, inspected, or verified using
+it.** This includes
+schematics, PCB layouts, mechanical parts and assemblies, drawings, fabrication
+and CAM packages, interface control documents, reports, and generated firmware
+stubs and templates.
+
+**Those outputs may be kept private or distributed under proprietary, commercial,
+or open-source terms chosen by their rights holders.** Using Eve requires no
+publication of designs or outputs, AGPL licensing of them, attribution to Eve,
+or continued use of Eve. Exported projects are independent of Eve.
+
+### Additional permission for Eve-owned output material
+
+As an additional permission under AGPLv3 section 7, the copyright holders of
+Eve-owned code and templates included in generated output permit that material
+to be used, modified, and redistributed as part of the output under terms of
+the recipient's choice, without AGPL obligations. This permission applies only
+to material for which Eve's contributors hold the necessary rights. It does
+not relicense Eve's application, copies or modifications of the application,
+or third-party material.
+
+Component libraries, models, SDK examples, and other third-party material retain
+their own licenses. Eve's output policy does not override those licenses or
+grant rights that their owners have not granted. Future output templates must
+identify their provenance and applicable permissions before adoption.
+
+The distinction between program licensing and output licensing is also
+described in [GNU's FAQ on program output](https://www.gnu.org/licenses/gpl-faq.en.html#WhatCaseIsOutputGPL).
+The standard AGPL text in `LICENSE` remains unmodified.
+
+## Optional attribution artwork
+
+Attribution such as "Co-designed with eve.engineer" is appreciated where
+practicable, but never required. It creates no publication, licensing, or
+continued-use requirement for a design.
+
+The original artwork, geometry data, KiCad footprint, FreeCAD sketch, and
+accompanying scripts under `assets/branding/hardware/` are offered under
+**CC0-1.0**, independently of Eve's application license. You may use and adapt
+these assets in private, proprietary, commercial, and open-source designs.
+Including the mark does not license your design under AGPL. This dedication
+does not grant trademark rights or imply endorsement. See that directory's
+`LICENSE` for the CC0 legal text.

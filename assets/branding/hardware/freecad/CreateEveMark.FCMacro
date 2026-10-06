@@ -1,0 +1,35 @@
+"""Create the 15 mm Eve attribution sketch in a NEW document.
+The sketch is editable, with unconstrained closed polylines in XY at the origin.
+A separate 0.5 mm relief preview is supplied; place the sketch on your part's
+face and use it as a Pad/Pocket profile in that part's existing Body.
+"""
+import json
+from pathlib import Path
+import FreeCAD as App
+import Part
+
+root = Path(__file__).resolve().parent.parent
+contours = json.loads((root / 'geometry.json').read_text())['contours']
+doc = App.newDocument('EveAttribution15mm')
+sketch = doc.addObject('Sketcher::SketchObject', 'EveAttribution')
+sketch.Label = 'Co-designed with eve.engineer (15 x 15 mm)'
+wires = []
+for contour in contours:
+    points = [App.Vector(x-7.5, 7.5-y, 0) for x, y in contour]
+    points.append(points[0])
+    sketch.addGeometry([Part.LineSegment(a,b) for a,b in zip(points, points[1:])], False)
+    wires.append(Part.makePolygon(points))
+face = Part.makeFace(wires, 'Part::FaceMakerBullseye')
+relief = doc.addObject('Part::Feature', 'ReliefPreview')
+relief.Label = 'Raised mark preview (0.5 mm; separate solids)'
+relief.Shape = face.extrude(App.Vector(0,0,0.5))
+assert relief.Shape.isValid() and relief.Shape.Volume > 0
+assert abs(relief.Shape.BoundBox.XLength-15) < 1e-7
+assert abs(relief.Shape.BoundBox.YLength-15) < 1e-7
+doc.recompute()
+if App.GuiUp:
+    sketch.Visibility = False
+    relief.ViewObject.ShapeColor = (0.10,0.24,0.17)
+    App.Gui.activeDocument().activeView().viewAxonometric()
+    App.Gui.activeDocument().activeView().fitAll()
+print('Eve mark: valid closed sketch; 15 x 15 mm; relief volume %.6f mm3' % relief.Shape.Volume)

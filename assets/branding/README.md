@@ -8,6 +8,10 @@ replacement leaves belong in the approved identity.
 Download the complete approved package: [eve-logo-icon-package.zip](eve-logo-icon-package.zip).
 Historical concepts are excluded from this archive.
 
+For optional physical attribution, use the separate [15 × 15 mm hardware marks](hardware/README.md):
+KiCad silkscreen footprint and FreeCAD sketch/relief. These original simplified
+manufacturing marks are CC0 and complement the approved portrait logo.
+
 ## Logos
 
 | Use | Light | Dark |
@@ -64,6 +68,7 @@ exports. Use green-and-ivory styling consistently and preserve clear space.
 The nominal supporting palette is forest green `#193E2C`, warm ivory `#FFFCF1`,
 and charcoal `#0D1117`; generated raster shading contains additional pixel values.
 
-Assets follow the repository's AGPL-3.0-only license. `concepts/` holds historical
+Assets follow the repository's AGPL-3.0-only license, except the separately
+CC0-licensed `hardware/` directory. `concepts/` holds historical
 explorations, not approved alternatives. Nothing in this package changes KiCad's
 own branding or implies project affiliation.

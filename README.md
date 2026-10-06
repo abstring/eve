@@ -21,6 +21,17 @@ around an engineer-in-the-loop philosophy:
 **AI proposes and implements. Tools verify. Humans own the engineering decisions.
 Physics gets the final vote.**
 
+**Your designs are yours. Eve's AGPL license covers Eve's software—not your
+hardware designs or generated outputs. Keep your work private, sell it, or
+share it under your own terms. No required publication, attribution to Eve,
+or continued use of Eve.** See [output licensing](docs/licensing.md#designs-and-generated-outputs)
+for the full policy and third-party material considerations.
+
+**Attribution is appreciated where practicable, never required.** If Eve helps
+with your design, consider a note such as "Co-designed with eve.engineer" in
+your documentation or on the hardware. Optional [15 × 15 mm hardware artwork](assets/branding/hardware/README.md)
+is available for KiCad silkscreen and FreeCAD raised or recessed marking.
+
 ## Project status
 
 This is the `0.1.0.dev0` foundation, not a finished autonomous design agent.
@@ -213,9 +224,21 @@ of Eve itself; it does not restrict which models engineers can use with Eve.
 
 ## License
 
-Eve is **AGPL-3.0-only**; see [LICENSE](LICENSE). Commercial use is permitted
-under its terms. Hardware projects do not acquire Eve's license merely by being
-opened or checked with the tool.
+Eve's software is **AGPL-3.0-only**; see [LICENSE](LICENSE). Commercial use is
+permitted under its terms.
+
+**Eve's license does not apply to hardware designs or other outputs created,
+edited, or verified with Eve. Your designs are yours.** Schematics, PCBs, mechanical models, drawings,
+fabrication and CAM packages, ICDs, reports, and generated firmware stubs and
+templates can remain private, proprietary, commercial, or open source under
+terms you choose. **Using Eve imposes no requirement to publish those outputs,
+license them under AGPL, attribute Eve, or keep using Eve.**
+
+If generated output incorporates Eve-owned code or templates, the project
+grants permission to use, modify, and redistribute that material as part of
+the output under terms you choose, without AGPL obligations. This permission
+does not cover Eve's software itself or third-party material, whose own
+licenses remain applicable. See the [output licensing policy](docs/licensing.md#designs-and-generated-outputs).
 
 The [dependency/license review](docs/licensing.md) records the decision.
 No code from the investigated MCP implementations has been incorporated.
